@@ -78,6 +78,128 @@ def getSequence(pChar):
                 "R90", "F1", "L90", "F5", "L90", "F1", "R90", "F1","E", \
                 "U", "L90", \
                 "F6", "R90", "F1", "L90"]    
+    elif pChar == "H":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2","L90","F3", "R90", "F2", \
+                "R90", "F3", "L90", "F2", "L90", "F7", "L90", "F2", "L90", \
+                "F3", "R90", "F2", "R90", "F3", "L90", "F2", "L90", "F7", \
+                "E", "U", \
+                "F1", "L90", "F7"]
+    elif pChar == "I":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F6","L90","F1", "L90", "F2", "R90", "F5", "R90", "F2", \
+                "L90", "F1", "L90", "F6", "L90", "F1", "L90", "F2", "R90", \
+                "F5", "R90", "F2", "L90", "F1", \
+                "E", "U", \
+                "F1", "L90", "F7"]
+    elif pChar == "J":
+        return ["U","F1","L90", "F2", "R90", \
+                "S1", "D", \
+                "F1","R90","F1", "L90", "F3", "L90", "F1", "R90", "F1", \
+                "L90", "F5", "R90", "F1", "L90", "F1", "L90", "F5", "L90", \
+                "F1", "L90", "F2", "R90", "F5", "R90", "F1", "R90", "F1", \
+                "L90", "F2", "L90", "F1", \
+                "E", "U", \
+                "F2", "L90", "F7"]
+    elif pChar == "K":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2","L90","F2", "R90", "F1", "R90", "F1", "L90", "F1", \
+                "R90", "F1", "L90", "F2", "L90", "F1", "L90", "F1", "R90", \
+                "F1", "L90", "F1", "R90", "F1", "L90", "F1", "R90", "F1", \
+                "R90", "F1", "L90", "F1", "R90", "F1", "L90", "F1", "R90", \
+                "F1", "L90", "F1", "L90", "F2", "L90", "F1", "R90", "F1", \
+                "L90", "F1", "R90", "F1", "R90", "F2", "L90", "F2", "L90", \
+                "F7", \
+                "E", "U", \
+                "F1", "L90", "F7"]
+    elif pChar == "L":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F6","L90","F1", "L90", "F4", "R90", "F6", "L90", "F2", \
+                "L90", "F7", \
+                "E", "U", \
+                "F1", "L90", "F7"]
+    elif pChar == "M":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2","L90","F4", "R90", "F1", "R90", "F2", "L90", "F1", \
+                "L90", "F2", "R90", "F1", "R90", "F4", "L90", "F2", "L90", "F7", \
+                "L90", "F2", "L90", "F1", "R90", "F1", "L90", "F1", "R90", "F1", \
+                "R90", "F1", "L90", "F1", "R90", "F1", "L90", "F2", "L90" ,"F7", \
+                "E", "U", \
+                "F1", "L90", "F7"]
+    elif pChar == "N":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2","L90","F3", "R90", "F1", "R90", "F1", "L90", "F1", "R90", "F2", \
+                "L90", "F2", "L90", "F7", "L90", "F2", "L90", "F3", "R90", "F1", \
+                "R90", "F1", "L90", "F1", "R90", "F2", "L90", "F2", "L90", "F7", \
+                "E", "U", \
+                "F1", "L90", "F7"]
+    elif pChar == "O":
+        return ["U","F1","L90", "F2", "R90", \
+                "S1", "D", \
+                "F1","R90","F1", "L90", "F4", "L90", "F1", "R90", "F1", "L90", "F5", \
+                "L90", "F1", "R90", "F1", "L90", "F4", "L90", "F1", "R90", "F1", \
+                "L90", "F5", \
+                "E", "U", \
+                "L90", "F2", "S2", "D", "F2", "L90", "F5", "L90", "F2", "L90", "F5", \
+                "L90", "E", "U", \
+                "F5", "R90", "F2", "L90"]
+    elif pChar == "P":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2","L90","F3", "R90", "F3", "L90", "F1", "R90", "F1", \
+                "L90", "F2", "L90", "F1", "R90", "F1", "L90", "F5", "L90", "F7", \
+                "E", "U", \
+                "L90", "F2","L90", "F4",\
+                "S2", "D", \
+                "F2", "R90", "F2", "R90", "F2", "R90", "F2","E", "U", \
+                "L180", "F5", "R90", "F5", "L90"]
+    elif pChar == "Q":
+        return ["U","F1","L90", "F2", "R90", \
+                "S1", "D", \
+                "F1","R90","F1", "L90", "F2", "L90", "F1", "R90", "F1", "R90", "F1", \
+                "L90", "F2", "L90", "F1", "L90", "F1", "R90", "F1", "R90", "F1", \
+                "L90",  "F4", \
+                "L90", "F1", "R90", "F1", "L90", "F4", "L90", "F1", "R90", "F1", \
+                "L90", "F5", \
+                "E", "U", \
+                "L90", "F2", "S2", "D", "F1", "L90", "F2", "R90", "F1", "L90", "F3", \
+                "L90", "F2", "L90", "F5", "E", "U", \
+                "L90", "F2", "L90", "F1", "S2", "D", "F1", "R90", "F1", "R90", \
+                "F1", "R90", "F1", "E", "U", \
+                "L180", "F3", "R90", "F3", "L90"]
+    elif pChar == "R":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2","L90","F3", "R90", "F1", "R90", "F1", "L90", "F1", "R90", "F2", \
+                "L90", "F2", "L90", "F2", "L90", "F1", "R90", "F2", "R90", "F1", \
+                "L90", "F2", "L90", "F1", "R90", "F1", "L90", "F5", "L90", "F7", \
+                "E", "U", \
+                "L90", "F2","L90", "F4",\
+                "S2", "D", \
+                "F2", "R90", "F2", "R90", "F2", "R90", "F2","E", "U", \
+                "L180", "F5", "R90", "F5", "L90"]
+    elif pChar == "S":
+        return ["U","F1","L90", "F2", "R90", \
+                "S1", "D", \
+                "F1","R90","F1", "L90", "F4", "L90", "F1", "R90", "F1", "L90", "F2", \
+                "L90", "F1", "R90", "F1", "L90", "F3", "R90", "F2", "R90", "F2", \
+                "R90", "F1", "L90", "F2", "L90", "F1", "L90", "F1", "R90", "F1", "L90", \
+                "F4", "L90", "F1", "R90", "F1", "L90", "F2", "L90", "F1", "R90", "F1", \
+                "L90", "F3", "R90", "F2", "R90", "F2", "R90", "F1", "L90", "F2", "L90", \
+                "F1", "L90", "E", "U", "F7", "R90", "F2", "L90"]
+    elif pChar == "T":
+        return ["U","F3","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2","L90","F6", "R90", "F2", "L90", "F1", "L90", "F6", \
+                "L90", "F1", "L90", "F2", "R90", "F6", "L90", \
+                "E", "U", \
+                "F5", "R90", "F1","L90"]
     else:
         return ["D","F8","L90","F8","L90","F8","L90","F8","L90", "U", \
                 "F8"]
@@ -93,7 +215,7 @@ def getSequence(pChar):
 # =======
 # When       Who                     Why
 # ---------- ----------------------- -------------------------------------------
-# 04/01/2018 Dave Hol'               Initial Version
+# 04/01 /2018 Dave Hol'               Initial Version
 # 05/01/2018 Dave Hol'               Removed X and Y parameters as we use the
 #                                    current turtle position.
 ################################################################################
@@ -109,7 +231,7 @@ def plotSequence(pTurtle, pSize, pLine, pFill1, pFill2, pSequence):
             pTurtle.forward(int(pSequence[i][1:len(pSequence[i])]) * pSize)
 
         elif wInstruction == "B":        # backwards
-            pTurtle.backwards(int(pSequence[i][1:len(pSequence[i])]) * pSize)
+            pTurtle.backward(int(pSequence[i][1:len(pSequence[i])]) * pSize)
 
         elif wInstruction == "L":        # left
             pTurtle.left(int(pSequence[i][1:len(pSequence[i])]))
@@ -143,18 +265,44 @@ def plotSequence(pTurtle, pSize, pLine, pFill1, pFill2, pSequence):
 
 bob=turtle.Turtle()
 
-#bob.left(20)
+wSize =15
+bob.setx(0)
+bob.sety(0)
+#splotSequence(bob, wSize, "Black", "Red", "White", getSequence("R"))
+#plotSequence(bob, wSize, "Black", "Red", "White", getSequence("S"))
+#bob.setx(wSize)
+#bob.sety(wSize)
+#plotSequence(bob, wSize, "Black", "Blue", "White", getSequence("M"))
+
+
+
+
+wSize = 3
+bob.backward(350)
+#bob.left(25)
 
 #plotSequence(bob, -50, 0, 5, "Black", "Green", "White", getSequence("D"))
 #plotSequence(bob, 50, 0, 5, "Black", "Red", "White", getSequence("B"))
 #plotSequence(bob, 100, 0, 5, "Black", "Blue", "White", getSequence("C"))
 
-plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("A"))
-plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("B"))
-plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("C"))
-plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("D"))
-plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("E"))
-plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("F"))
-plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("G"))
-plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("G"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("A"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("B"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("C"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("D"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("E"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("F"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("G"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("H"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("I"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("J"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("K"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("L"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("M"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("N"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("O"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("P"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("Q"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("R"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("S"))
+plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("T"))
 
