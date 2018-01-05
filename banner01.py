@@ -68,7 +68,16 @@ def getSequence(pChar):
                 "L90", "F1", "L90", "F3", "R90", "F2", "R90", "F4", "L90", \
                 "F1", "L90", "F6", "L90", "F7", \
                 "E", "U", \
-                "F1", "L90", "F7"]    
+                "F1", "L90", "F7"]
+    elif pChar == "G":
+        return ["U","F1","L90", "F1", "R90", "F1", "D","S1", "F4","L90","F1", \
+                "R90", "F1","L90","F3","L90", "F3", "L90","F1", \
+                "L90", "F1", "R90","F2", "R90", "F2", \
+                "R90","F5", "R90", "F2", "R90", "F1", "L90", "F2", "L90", \
+                "F1", "L90", "F1", "R90", "F1", "L90", "F4", "L90", "F1", \
+                "R90", "F1", "L90", "F5", "L90", "F1", "R90", "F1","E", \
+                "U", "L90", \
+                "F6", "R90", "F1", "L90"]    
     else:
         return ["D","F8","L90","F8","L90","F8","L90","F8","L90", "U", \
                 "F8"]
@@ -146,5 +155,6 @@ plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("C"))
 plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("D"))
 plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("E"))
 plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("F"))
-plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("F"))
+plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("G"))
+plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("G"))
 
