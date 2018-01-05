@@ -46,13 +46,29 @@ def getSequence(pChar):
                 "U", "L90", \
                 "F6", "R90", "F1", "L90"]
     elif pChar == "D":
-        return ["U","F1","L90", "F1", "R90", "F1", "D","S1", "F5","L90","F1", \
+        return ["U","F1","L90", "F1", "R90", "D","S1", "F5","L90","F1", \
                 "R90", "F1","L90","F5","L90", "F1", "R90","F1", "L90","F5", \
                 "L90","F7", "L90", "E", "U", \
                 "F2", "L90", "F1", \
                 "D", "S2", "F5", "R90", "F2", "R90", "F5", "R90", "F2", \
                 "R180", "E","U", \
                 "F5", "R90", "F2", "L90"]
+    elif pChar == "E":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F6","L90","F1", "L90", "F4", "R90", "F2", "R90", "F3", \
+                "L90", "F1", "L90", "F3", "R90", "F2", "R90", "F4", "L90", \
+                "F1", "L90", "F6", "L90", "F7", \
+                "E", "U", \
+                "F1", "L90", "F7"]
+    elif pChar == "F":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2","L90","F3", "R90", "F3", \
+                "L90", "F1", "L90", "F3", "R90", "F2", "R90", "F4", "L90", \
+                "F1", "L90", "F6", "L90", "F7", \
+                "E", "U", \
+                "F1", "L90", "F7"]    
     else:
         return ["D","F8","L90","F8","L90","F8","L90","F8","L90", "U", \
                 "F8"]
@@ -118,7 +134,7 @@ def plotSequence(pTurtle, pSize, pLine, pFill1, pFill2, pSequence):
 
 bob=turtle.Turtle()
 
-bob.left(20)
+#bob.left(20)
 
 #plotSequence(bob, -50, 0, 5, "Black", "Green", "White", getSequence("D"))
 #plotSequence(bob, 50, 0, 5, "Black", "Red", "White", getSequence("B"))
@@ -129,3 +145,6 @@ plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("B"))
 plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("C"))
 plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("D"))
 plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("E"))
+plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("F"))
+plotSequence(bob, 5, "Black", "Yellow", "White", getSequence("F"))
+
