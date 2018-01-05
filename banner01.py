@@ -17,23 +17,26 @@ import turtle
 def getSequence(pChar):
 
     if pChar == "A":
-        return ["U","F1","D","F2","L90","F2","R90","F2","R90","F2","L90","F2", \
+        return ["U","F1","S1", "D","F2","L90","F2","R90","F2","R90","F2","L90","F2", \
                 "L90","F6","L90","F1","R90","F1","L90","F4","L90","F1","R90", \
-                "F1","L90","F6","L90","U","F2","L90","F3","D","F3","R90","F2", \
-                "R90","F3","R90","F2","U","L180"]
+                "F1","L90","F6","L90", "E","U","F2","L90","F3","D","S2", "F3","R90","F2", \
+                "R90","F3","R90","F2","E", "U","L180"]
     elif pChar == "B":
-        return ["U","F1","D","F5","L90","F1","R90","F1","L90","F2","L90","F1", \
+        return ["U","F1","D","S1", "F5","L90","F1","R90","F1","L90","F2","L90","F1", \
                 "R90","F1","R90","F1","L90","F2","L90","F1","R90","F1","L90", \
-                "F5","L90","F7","L90","U","F2","L90","F1","D","F2","R90","F2", \
-                "R90","F2","R90","F2","U","R90","F3","D","F2","R90","F2","R90", \
-                "F2","R90","F2","U","L180"]
+                "F5","L90","F7","L90","E", "U","F2","L90","F1","D","S2", "F2","R90","F2", \
+                "R90","F2","R90","F2","E", "U","R90","F3","D","S2","F2","R90","F2","R90", \
+                "F2","R90","F2","E", "U","L180"]
 
     else:
         return ["D","F8","L90","F8","L90","F8","L90","F8","L90"]
 
 ################################################################################
 # Process the sequence passed in and output a character at the required
-# co-ordinated.
+# co-ordinates.
+#
+# pLine is the line colour, pFill1 is the fill colour for the letter being
+# plotted, pFill2 is the fill colour of the background.
 #
 # HISTORY
 # =======
@@ -41,7 +44,7 @@ def getSequence(pChar):
 # ---------- ----------------------- -------------------------------------------
 # 04/01/2018 Dave Hol'               Initial Version
 ################################################################################
-def plotSequence(pTurtle, pX, pY, pSize, pLine, pFill, pSequence):
+def plotSequence(pTurtle, pX, pY, pSize, pLine, pFill1, pFill2, pSequence):
     # First move to the specified position
     pTurtle.penup()
     pTurtle.setx(pX)
@@ -71,6 +74,19 @@ def plotSequence(pTurtle, pX, pY, pSize, pLine, pFill, pSequence):
         elif wInstruction == "D":        # pen down
             pTurtle.pendown()
 
+        elif wInstruction == "S":        # begin fill
+
+            # The number after S determines which of the 2 fill colours to use
+            if pSequence[i][1:len(pSequence[i])] == "1":
+                pTurtle.color(pLine,pFill1)
+            elif pSequence[i][1:len(pSequence[i])] == "2":
+                pTurtle.color(pLine,pFill2)
+
+            pTurtle.begin_fill()
+            
+        elif wInstruction == "E":        # end fill
+            pTurtle.end_fill()
+
 
 ################################################################################
 # Program starts here
@@ -78,7 +94,8 @@ def plotSequence(pTurtle, pX, pY, pSize, pLine, pFill, pSequence):
 ################################################################################
 
 bob=turtle.Turtle()
+bob.left(20)
 
-plotSequence(bob, 0, 0, 5, "Black", "Yellow", getSequence("A"))
-plotSequence(bob, 50, 0, 7, "Black", "Yellow", getSequence("B"))
-plotSequence(bob, 150, 0, 9, "Black", "Yellow", getSequence("A"))
+plotSequence(bob, 0, 0, 5, "Black", "Yellow", "White", getSequence("A"))
+plotSequence(bob, 50, 0, 7, "Black", "Red", "White", getSequence("B"))
+plotSequence(bob, 150, 0, 9, "Black", "Yellow", "White", getSequence("C"))
