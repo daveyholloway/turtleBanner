@@ -6,7 +6,7 @@ import turtle
 #      Fn : Forward n          Bn : Back n
 #      Ln : Left n degrees     Rn : Right n degrees
 #      U  : Pen up             D  : Pen down
-#      S  : Start fill         E  : End fill
+#      Sn : Start fill #n      E  : End fill
 #
 # HISTORY
 # =======
@@ -36,6 +36,13 @@ def getSequence(pChar):
                 "F1", "L90", "F1", "R90", "F1", "L90", "F4", "L90", "F1", \
                 "R90", "F1", "L90", "F5", "L90", "F1", "R90", "F1","E", \
                 "U", "L90"]
+    elif pChar == "D":
+        return ["U","F1","L90", "F1", "R90", "F1", "D","S1", "F5","L90","F1", \
+                "R90", "F1","L90","F5","L90", "F1", "R90","F1", "L90","F5", \
+                "L90","F7", "L90", "E", "U", \
+                "F2", "L90", "F1", \
+                "D", "S2", "F5", "R90", "F2", "R90", "F5", "R90", "F2", \
+                "R180", "E","U"]
     else:
         return ["D","F8","L90","F8","L90","F8","L90","F8","L90"]
 
@@ -102,7 +109,7 @@ def plotSequence(pTurtle, pX, pY, pSize, pLine, pFill1, pFill2, pSequence):
 
 bob=turtle.Turtle()
 
-plotSequence(bob, -50, 0, 5, "Black", "Green", "White", getSequence("C"))
+plotSequence(bob, -50, 0, 5, "Black", "Green", "White", getSequence("D"))
 plotSequence(bob, 0, 0, 5, "Black", "Yellow", "White", getSequence("A"))
 plotSequence(bob, 50, 0, 5, "Black", "Red", "White", getSequence("B"))
 plotSequence(bob, 100, 0, 5, "Black", "Blue", "White", getSequence("C"))
