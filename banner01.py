@@ -77,7 +77,7 @@ def getSequence(pChar):
                 "F1", "L90", "F1", "R90", "F1", "L90", "F4", "L90", "F1", \
                 "R90", "F1", "L90", "F5", "L90", "F1", "R90", "F1","E", \
                 "U", "L90", \
-                "F6", "R90", "F1", "L90"]    
+                "F6", "R90", "F1", "L90"]
     elif pChar == "H":
         return ["U","F1","L90", "F1", "R90", \
                 "S1", "D", \
@@ -200,9 +200,69 @@ def getSequence(pChar):
                 "L90", "F1", "L90", "F2", "R90", "F6", "L90", \
                 "E", "U", \
                 "F5", "R90", "F1","L90"]
+    elif pChar == "U":
+        return ["U","F1","L90", "F2", "R90", \
+                "S1", "D", \
+                "F1","R90","F1", "L90", "F4", "L90", "F1", "R90", "F1", "L90", "F6", \
+                "L90", "F2", "L90", "F6", "R90", "F2", "R90", "F6", "L90", "F2", \
+                "L90", "F6", "L90", "F1", \
+                "E", "U", \
+                "F7", "R90", "F2", "L90"]
+    elif pChar == "V":
+        return ["U","F2","L90", "F2", "R90", \
+                "S1", "D", \
+                "F1","R90","F1", "L90", "F2", "L90", "F1", "R90", "F1", "L90", "F1", \
+                "R90", "F1", "L90","F5", "L90", "F2" , "L90", "F5", \
+                "R90", "F2", "R90", "F5", "L90", "F2", \
+                "L90", "F5", "L90", "F1", "R90", "F1", "L90", \
+                "E", "U", \
+                "F6", "R90", "F2", "L90"]
+    elif pChar == "W":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2", "L90", "F1", "R90", "F1", "L90", "F1", "R90", "F1", \
+                "R90", "F1", "L90", "F1", "R90", "F1", "L90", "F2", "L90" ,"F7", \
+                "L90", "F2","L90","F4", "R90", "F1", "R90", "F2", "L90", "F1", \
+                "L90", "F2", "R90", "F1", "R90", "F4", "L90", "F2", "L90", "F7", \
+                "E", "U", \
+                "F1", "L90", "F7"]
+    elif pChar == "X":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2", "L90", "F2", "R90", "F2", "R90", "F2", "L90", "F2", \
+                "L90", "F2", "L90", "F1", "R90", "F1", "L90", "F1", "R90" ,"F1", \
+                "R90", "F1","L90","F1", "R90", "F1", "L90", "F2", "L90", \
+                "F2", "L90", "F2", "R90", "F2", "R90", "F2", "L90", "F2", \
+                "L90", "F2", "L90", "F1", "R90", "F1", "L90", "F1", "R90" ,"F1", \
+                "R90", "F1","L90","F1", "R90", "F1", "L90", "F2", \
+                "E", "U", \
+                "F1", "L90", "F7"]
+    elif pChar == "Y":
+        return ["U","F3","L90", "F1", "R90", \
+                "S1", "D", \
+                "F2", "L90", "F3", "R90", "F1", "L90", "F1", "R90", "F1", \
+                "L90", "F3", "L90", "F2", "L90", "F3", "R90", "F2", "R90" ,"F3", \
+                "L90", "F2","L90","F3", "L90", "F1", "R90", "F1", "L90", \
+                "F1", "R90", "F3", "L90", \
+                "E", "U", \
+                "F5", "R90", "F1","L90"]
+    elif pChar == "Z":
+        return ["U","F1","L90", "F1", "R90", \
+                "S1", "D", \
+                "F6", "L90", "F1", "L90", "F4", "R90", "F1", "R90", "F1", \
+                "L90", "F1", "R90", "F1", "L90", "F1", "R90", "F1", "L90" ,"F1", \
+                "R90", "F1", "L90", "F2", "L90", \
+                "F6", "L90", "F1", "L90", "F4", "R90", "F1", "R90", "F1", \
+                "L90", "F1", "R90", "F1", "L90", "F1", "R90", "F1", "L90" ,"F1", \
+                "R90", "F1", "L90", "F2", "L90", \
+                "E", "U", \
+                "F7", "R90", "F1","L90"]
+    elif pChar == " ":
+        return ["U","F8"]
     else:
-        return ["D","F8","L90","F8","L90","F8","L90","F8","L90", "U", \
-                "F8"]
+        return ["U","F1","L90", "F1", "R90", "D", \
+                "F6","L90","F6","L90","F6","L90","F6","L90", "U", \
+                "F7","R90","F1","L90"]
 
 ################################################################################
 # Process the sequence passed in and output a character at the current turtle
@@ -265,44 +325,14 @@ def plotSequence(pTurtle, pSize, pLine, pFill1, pFill2, pSequence):
 
 bob=turtle.Turtle()
 
-wSize =15
-bob.setx(0)
-bob.sety(0)
-#splotSequence(bob, wSize, "Black", "Red", "White", getSequence("R"))
-#plotSequence(bob, wSize, "Black", "Red", "White", getSequence("S"))
-#bob.setx(wSize)
-#bob.sety(wSize)
-#plotSequence(bob, wSize, "Black", "Blue", "White", getSequence("M"))
+wSize = 5
+bob.penup()
+bob.backward(150)
+
+wMessage="EKIT EKIT EKIT EKIT EKIT "
 
 
-
-
-wSize = 3
-bob.backward(350)
-#bob.left(25)
-
-#plotSequence(bob, -50, 0, 5, "Black", "Green", "White", getSequence("D"))
-#plotSequence(bob, 50, 0, 5, "Black", "Red", "White", getSequence("B"))
-#plotSequence(bob, 100, 0, 5, "Black", "Blue", "White", getSequence("C"))
-
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("A"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("B"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("C"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("D"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("E"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("F"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("G"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("H"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("I"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("J"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("K"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("L"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("M"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("N"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("O"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("P"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("Q"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("R"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("S"))
-plotSequence(bob, wSize, "Black", "Yellow", "White", getSequence("T"))
-
+for i in range(0,len(wMessage)):
+    plotSequence(bob, wSize, "Black", "Green", "White", getSequence(wMessage[i]))
+    bob.forward(wSize)
+    bob.left(360/len(wMessage))
